@@ -1,0 +1,19 @@
+{
+  "name": "guardian",
+  "version": "1.0.0",
+  "description": "A fullstack web password manager",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KrishT0/Guardian.git"
+  },
+  "author": "Krishna Biswal & Priya Pandey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KrishT0/Guardian/issues"
+  },
+  "homepage": "https://github.com/KrishT0/Guardian#readme"
+}
