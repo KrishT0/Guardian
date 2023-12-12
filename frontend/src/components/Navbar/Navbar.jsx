@@ -23,9 +23,14 @@ function Navbar() {
           Help
         </Link>
       </div>
-      <Link to="/ola" className={classes.btn}>
-        Sign Up
-      </Link>
+      <div>
+        <Link to="/auth" className={classes.btn}>
+          Get Started
+        </Link>
+        <Link to="/auth" className={classes.btn}>
+          Sign Up
+        </Link>
+      </div>
     </nav>
   );
 }

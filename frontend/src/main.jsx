@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./Root";
 import Error from "./pages/Error";
 import Home from "./pages/Home";
+import Authentication from "./components/Authentication/Authentication";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
+      },
+      {
+        path: "auth",
+        element: <Authentication />,
       },
     ],
   },
