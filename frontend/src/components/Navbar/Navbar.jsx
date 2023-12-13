@@ -24,11 +24,11 @@ function Navbar() {
         </Link>
       </div>
       <div>
-        <Link to="/auth" className={classes.btn}>
+        <Link to="/auth/sign-up" className={classes.btn}>
           Get Started
         </Link>
-        <Link to="/auth" className={classes.btn}>
-          Sign Up
+        <Link to="/auth/login" className={classes.btn}>
+          Login
         </Link>
       </div>
     </nav>

@@ -6,6 +6,7 @@ import Root from "./Root";
 import Error from "./pages/Error";
 import Home from "./pages/Home";
 import Authentication from "./components/Authentication/Authentication";
+import ForgetPassword from "./components/Authentication/ForgetPassword";
 
 const router = createBrowserRouter([
   {
@@ -19,7 +20,14 @@ const router = createBrowserRouter([
       },
       {
         path: "auth",
-        element: <Authentication />,
+        children: [
+          { path: "login", element: <Authentication mode={"login"} /> },
+          { path: "sign-up", element: <Authentication mode={"sign-up"} /> },
+        ],
+      },
+      {
+        path: "/forget-password",
+        element: <ForgetPassword />,
       },
     ],
   },

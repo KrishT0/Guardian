@@ -1,20 +1,28 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Login from "./Login";
 import Signup from "./Signup";
 import classes from "./authentication.module.css";
+import auth from "../../assets/auth.png";
 
-function Authentication() {
+function Authentication({ mode }) {
   const [authMode, setAuthMode] = useState("login");
 
-  function authClickHandler() {
-    setAuthMode(authMode === "login" ? "signup" : "login");
-  }
+  useEffect(() => {
+    setAuthMode(mode);
+  }, [mode]);
 
   return (
     <section className={classes.container}>
-      <h1>Authentication</h1>
-      <div>image with text</div>
-      <div>{authMode === "login" ? <Login /> : <Signup />}</div>
+      <div>
+        <img src={auth} alt="" />
+      </div>
+      <div>
+        {authMode === "login" ? (
+          <Login setAuthMode={setAuthMode} />
+        ) : (
+          <Signup setAuthMode={setAuthMode} />
+        )}
+      </div>
     </section>
   );
 }
