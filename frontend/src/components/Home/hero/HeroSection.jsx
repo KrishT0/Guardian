@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "./hero.module.css";
+
 import image from "../../../assets/website-demo.png";
 
 function HeroSection() {

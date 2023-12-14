@@ -1,6 +1,7 @@
 import React from "react";
 import classes from "./extra.module.css";
 import ExtraCard from "./ExtraCard";
+
 import clockLock from "../../../assets/circle-lock.png";
 import message from "../../../assets/message.png";
 import safeLock from "../../../assets/safe-lock.png";

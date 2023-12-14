@@ -7,6 +7,8 @@ import Error from "./pages/Error";
 import Home from "./pages/Home";
 import Authentication from "./components/Authentication/Authentication";
 import ForgetPassword from "./components/Authentication/ForgetPassword";
+import Pricing from "./components/Others/Pricing/Pricing";
+import Privacy from "./components/Others/Privacy/Privacy";
 
 const router = createBrowserRouter([
   {
@@ -27,7 +29,15 @@ const router = createBrowserRouter([
       },
       {
         path: "/forget-password",
-        element: <ForgetPassword />,
+        element: <ForgetPassword />,    
+      },
+      {
+        path: "/pricing",
+        element: <Pricing />,
+      },
+      {
+        path: "/privacy",
+        element: <Privacy/>,
       },
     ],
   },
