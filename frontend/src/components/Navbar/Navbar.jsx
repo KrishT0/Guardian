@@ -16,7 +16,7 @@ function Navbar() {
         <Link to="/ola" className={classes.btn}>
           Bussiness
         </Link>
-        <Link to="/ola" className={classes.btn}>
+        <Link to="/pricing" className={classes.btn}>
           Pricing
         </Link>
         <Link to="/ola" className={classes.btn}>

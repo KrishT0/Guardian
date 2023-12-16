@@ -29,7 +29,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/forget-password",
-        element: <ForgetPassword />,    
+        element: <ForgetPassword />,
       },
       {
         path: "/pricing",
@@ -37,7 +37,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/privacy",
-        element: <Privacy/>,
+        element: <Privacy />,
       },
     ],
   },

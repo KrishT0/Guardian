@@ -5,7 +5,6 @@ import Feature from "../components/Home/feature/Feature";
 import BussinessPricing from "../components/Home/bussinessPricing/BussinessPricing";
 import Extra from "../components/Home/extraFeatures/Extra";
 import Ebook from "../components/Home/ebook/Ebook";
-import PreFooter from "../components/Home/links/PreFooter";
 
 function Home() {
   return (
@@ -16,7 +15,6 @@ function Home() {
       <BussinessPricing />
       <Extra />
       <Ebook />
-      <PreFooter />
     </div>
   );
 }
