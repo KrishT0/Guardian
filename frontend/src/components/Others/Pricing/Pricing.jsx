@@ -20,7 +20,7 @@ function Pricing() {
           <button
             onClick={priceclickHandler}
             className={`${classes.btn} ${
-              priceMode === "personal" ? classes.active : ""
+              priceMode === "personal" && classes.active
             }`}
           >
             Personal
@@ -28,7 +28,7 @@ function Pricing() {
           <button
             onClick={priceclickHandler}
             className={`${classes.btn} ${
-              priceMode === "bussiness" ? classes.active : ""
+              priceMode === "bussiness" && classes.active
             }`}
           >
             Bussiness
