@@ -38,7 +38,7 @@
   outline: none;
 }
 
-.loginform button{
+.loginform .tpButton{
   margin-top: 1rem;
   padding: 0.5rem;
   border-radius: 0.5rem;
@@ -56,6 +56,15 @@
 }
 
 .signUpform .btn {
+  margin-top: 0.5rem;
+  padding: 0.2rem;
+  border: none;
+  background: transparent;
+  color: blueviolet;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.loginform .btn {
   margin-top: 0.5rem;
   padding: 0.2rem;
   border: none;
@@ -91,7 +100,7 @@
   outline: none;
 }
 
-.signUpform button {
+.signUpform .tpButton {
   margin-top: 1rem;
   padding: 0.5rem;
   border-radius: 0.5rem;
