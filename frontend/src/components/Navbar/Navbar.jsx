@@ -7,7 +7,7 @@ function Navbar() {
     <nav>
       <div>Logo</div>
       <div className={classes.center}>
-        <Link to="/ola" className={classes.btn}>
+        <Link to="/" className={classes.btn}>
           Home
         </Link>
         <Link to="/ola" className={classes.btn}>

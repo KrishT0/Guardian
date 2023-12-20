@@ -56,6 +56,7 @@
   border-radius: 1rem;
   padding: 2rem;
   text-align: center;
+  width: 18rem;
 }
 
 .price {
@@ -75,26 +76,30 @@
   font-weight: 400;
 }
 
-.card ul {
+.card ul,
+.cardB ul {
   list-style: none;
   text-align: left;
 }
 
-.card li {
+.card li,
+.cardB li {
   margin: 0.8rem;
 }
 
-.card ul li:before {
+.card ul li:before,
+.cardB ul li:before {
   content: "✔️ ";
 }
 
-.lastP{
+.lastP {
   margin-top: 2.3rem;
   font-size: 0.8rem;
   color: grey;
 }
 
-.card button{
+.card button,
+.cardB button {
   margin-top: 1rem;
   padding: 1rem;
   border-radius: 2.5rem;
@@ -106,8 +111,26 @@
   cursor: pointer;
 }
 
-.finalP{
+.finalP {
   font-size: 1rem;
   font-weight: 400;
   margin: 2rem;
 }
+
+/* bussiness card */
+
+.cardB {
+  background: white;
+  color: black;
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  width: 18rem;
+}
+
+.medP {
+  margin: 0.4rem;
+  font-size: 1rem;
+}
+
+

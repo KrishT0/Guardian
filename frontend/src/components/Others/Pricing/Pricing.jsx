@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import classes from "./pricing.module.css";
 import PersonalPricing from "./PersonalPricing";
 import BussinessPricing from "./BussinessPricing";
+import CoreFeatures from "./CoreFeatures";
 
 function Pricing() {
   const [priceMode, setPriceMode] = useState("personal");
@@ -39,7 +40,7 @@ function Pricing() {
           Pricing shown in USD. Enterprise plan based on annual subscription
         </p>
       </section>
-      <p>core features</p>
+      <CoreFeatures />
     </section>
   );
 }
