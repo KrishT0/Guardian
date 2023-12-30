@@ -9,6 +9,7 @@ import Authentication from "./components/Authentication/Authentication";
 import ForgetPassword from "./components/Authentication/ForgetPassword";
 import Pricing from "./components/Others/Pricing/Pricing";
 import Privacy from "./components/Others/Privacy/Privacy";
+import Works from "./components/Others/Works/Works";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: "/privacy",
         element: <Privacy />,
+      },
+      {
+        path: "works",
+        element: <Works />,
       },
     ],
   },

@@ -1,0 +1,24 @@
+.container {
+  margin: 3rem auto;
+  display: flex;
+  background: grey;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  justify-content: space-between;
+}
+
+.card
+{
+     display: flex;
+     flex-direction: column;
+     width: 47%;
+}
+
+.card img{
+height: 25rem;
+}
+
+.card h1{
+     font-size: 2rem;
+     margin: 1rem;
+}

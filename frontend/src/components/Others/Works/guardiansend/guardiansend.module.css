@@ -1,0 +1,38 @@
+.container {
+  margin: 5rem auto;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  align-items: center;
+  background: #171821;
+  color: #91a0b5;
+  border-radius: 1rem;
+}
+
+.container img {
+  width: 30rem;
+  border-radius: 1rem;
+}
+
+.right {
+  width: 40rem;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.right h1 {
+  font-size: 2.3rem;
+  margin-bottom: 2rem;
+}
+
+.right button{
+  margin-top: 2rem;
+  padding: 0.8rem 1.8rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: #2f80ed;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}

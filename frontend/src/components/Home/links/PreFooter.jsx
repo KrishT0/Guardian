@@ -8,7 +8,7 @@ function PreFooter() {
       <section className={classes.section}>
         <div className={classes.linkGroup}>
           <h1>Products</h1>
-          <Link to="/">
+          <Link to="/works">
             <p>How Guardian works</p>
           </Link>
           <Link to="/">

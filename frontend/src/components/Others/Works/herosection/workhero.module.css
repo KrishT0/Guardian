@@ -1,0 +1,47 @@
+.section {
+  margin: 1rem;
+  padding: 1rem;
+  display: flex;
+}
+
+.section img {
+  width: 45%;
+}
+
+.heroleft {
+  margin-top: 3rem;
+}
+
+.heroleft h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.heroleft p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.btnGroup {
+  display: flex;
+  justify-content: left;
+  gap: 2rem;
+}
+
+.btnGroup button {
+  padding: 0.8rem 1.5rem;
+  border-radius: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  background: black;
+  cursor: pointer;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btnGroup button:hover {
+  background: #ebe5e5;
+  color: black;
+}
