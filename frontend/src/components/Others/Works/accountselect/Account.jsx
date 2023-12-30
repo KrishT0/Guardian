@@ -1,6 +1,6 @@
-/* eslint-disable react/prop-types */
 import classes from "./account.module.css";
 import { Link } from "react-router-dom";
+
 function Account({ data }) {
   return (
     <div className={classes.card}>
