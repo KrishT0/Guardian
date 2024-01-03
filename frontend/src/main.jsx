@@ -10,6 +10,7 @@ import ForgetPassword from "./components/Authentication/ForgetPassword";
 import Pricing from "./components/Others/Pricing/Pricing";
 import Privacy from "./components/Others/Privacy/Privacy";
 import Works from "./components/Others/Works/Works";
+import Vault from "./pages/Vault";
 
 const router = createBrowserRouter([
   {
@@ -29,27 +30,31 @@ const router = createBrowserRouter([
         ],
       },
       {
-        path: "/forget-password",
+        path: "forget-password",
         element: <ForgetPassword />,
       },
       {
-        path: "/pricing",
+        path: "pricing",
         element: <Pricing />,
       },
       {
-        path: "/privacy",
+        path: "privacy",
         element: <Privacy />,
       },
       {
         path: "works",
         element: <Works />,
       },
+      {
+        path: "vault",
+        element: <Vault />,
+      },
     ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
+  // <React.StrictMode>
+  <RouterProvider router={router} />
+  // </React.StrictMode>
 );
