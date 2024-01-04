@@ -10,10 +10,10 @@ function Navbar() {
         <Link to="/ola" className={classes.btn}>
           Home
         </Link>
-        <Link to="/ola" className={classes.btn}>
+        <Link to="/personal" className={classes.btn}>
           Personal
         </Link>
-        <Link to="/ola" className={classes.btn}>
+        <Link to="/bussiness" className={classes.btn}>
           Bussiness
         </Link>
         <Link to="/ola" className={classes.btn}>

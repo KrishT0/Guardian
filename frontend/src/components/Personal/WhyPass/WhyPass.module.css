@@ -1,0 +1,26 @@
+.section{
+    max-width: 1600px;
+    margin: 0rem auto;
+    padding: 0 2rem;
+    background-color: black;
+    color: white;
+    margin-bottom: 4rem;
+}
+.why{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+.logo{
+    width: 30%;
+}
+.content{
+    width: 65%;
+}
+.content h3{
+    font-size: x-large;
+}
+.content p{
+    font-size: larger;
+}
