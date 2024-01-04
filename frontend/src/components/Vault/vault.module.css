@@ -2,6 +2,10 @@
   max-width: 1200px;
   margin: 0 auto;
   min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
 }
 
 .topHeadRow p,
@@ -39,4 +43,14 @@
   background: #171821;
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
+  margin-bottom: 4rem;
+}
+
+.modal{
+ width: 50rem;
+ height: 30rem;
+ background: #171821;
+ margin: 3rem auto;
+ border-radius: 1rem;
+ padding: 2rem;
 }
