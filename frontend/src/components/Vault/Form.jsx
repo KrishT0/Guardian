@@ -2,21 +2,22 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import classes from "./vault.module.css";
 
-function Form() {
-  let firstNameProp = "defaultName";
-  let emailProp = "email";
-  let websiteUrlProp = "hueh";
-  let passwordProp = "pl";
+function Form({ firstNameProp, emailProp, websiteUrlProp, passwordProp }) {
+  let firstNameStore = firstNameProp ? firstNameProp : "";
+  let emailStore = emailProp ? emailProp : "";
+  let websiteUrlStore = websiteUrlProp ? websiteUrlProp : "";
+  let passwordStore = passwordProp ? passwordProp : "";
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm({
     defaultValues: {
-      firstName: firstNameProp,
-      email: emailProp,
-      websiteUrl: websiteUrlProp,
-      password: passwordProp,
+      firstName: firstNameStore,
+      email: emailStore,
+      websiteUrl: websiteUrlStore,
+      password: passwordStore,
     },
   });
   const onSubmitForm = (data) => console.log(data);
