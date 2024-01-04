@@ -1,0 +1,161 @@
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.container img {
+  width: 50rem;
+}
+
+.loginform {
+  width: 25rem;
+  height: 18rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  background: rgb(239, 239, 239);
+}
+
+.loginform label {
+  margin-left: 0.5rem;
+}
+
+.loginform input {
+  margin-bottom: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  border: 2px solid black;
+}
+
+.loginform input:focus {
+  border: 2px solid blueviolet;
+  outline: none;
+}
+
+.loginform .tpButton{
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  background: rgb(0, 0, 0);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.loginform p,
+.loginform a {
+  text-align: center;
+  text-decoration: none;
+}
+
+.signUpform .btn {
+  margin-top: 0.5rem;
+  padding: 0.2rem;
+  border: none;
+  background: transparent;
+  color: blueviolet;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.loginform .btn {
+  margin-top: 0.5rem;
+  padding: 0.2rem;
+  border: none;
+  background: transparent;
+  color: blueviolet;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.signUpform {
+  width: 25rem;
+  height: 22rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  background: rgb(239, 239, 239);
+}
+
+.signUpform label {
+  margin-left: 0.5rem;
+}
+
+.signUpform input {
+  margin-bottom: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  border: 2px solid black;
+}
+
+.signUpform input:focus {
+  border: 2px solid blueviolet;
+  outline: none;
+}
+
+.signUpform .tpButton {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  background: rgb(0, 0, 0);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.signUpform p,
+.signUpform a {
+  text-align: center;
+  text-decoration: none;
+}
+
+.forget {
+  margin-top: 0;
+  color: blueviolet;
+  cursor: pointer;
+}
+
+.forgetForm{
+  width: 25rem;
+  height: 10rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  background: rgb(239, 239, 239);
+}
+
+.forgetForm label {
+  margin-left: 0.5rem;
+}
+
+.forgetForm input {
+  margin-bottom: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  border: 2px solid black;
+}
+
+.forgetForm input:focus {
+  border: 2px solid blueviolet;
+  outline: none;
+}
+
+.forgetForm button {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  background: rgb(0, 0, 0);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}

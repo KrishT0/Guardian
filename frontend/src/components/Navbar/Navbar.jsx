@@ -7,7 +7,7 @@ function Navbar() {
     <nav>
       <div>Logo</div>
       <div className={classes.center}>
-        <Link to="/ola" className={classes.btn}>
+        <Link to="/" className={classes.btn}>
           Home
         </Link>
         <Link to="/personal" className={classes.btn}>
@@ -16,16 +16,21 @@ function Navbar() {
         <Link to="/bussiness" className={classes.btn}>
           Bussiness
         </Link>
-        <Link to="/ola" className={classes.btn}>
+        <Link to="/pricing" className={classes.btn}>
           Pricing
         </Link>
         <Link to="/ola" className={classes.btn}>
           Help
         </Link>
       </div>
-      <Link to="/ola" className={classes.btn}>
-        Sign Up
-      </Link>
+      <div>
+        <Link to="/auth/sign-up" className={classes.btn}>
+          Get Started
+        </Link>
+        <Link to="/auth/login" className={classes.btn}>
+          Login
+        </Link>
+      </div>
     </nav>
   );
 }

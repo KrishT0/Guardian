@@ -1,9 +1,10 @@
 import React from "react";
-import HeroSection from "../components/HomePage/hero/HeroSection";
-import Survey from "../components/HomePage/survey/Survey";
-import Feature from "../components/HomePage/feature/Feature";
-import BussinessPricing from "../components/HomePage/bussinessPricing/BussinessPricing";
-import Extra from "../components/HomePage/extraFeatures/Extra";
+import HeroSection from "../components/Home/hero/HeroSection";
+import Survey from "../components/Home/survey/Survey";
+import Feature from "../components/Home/feature/Feature";
+import BussinessPricing from "../components/Home/bussinessPricing/BussinessPricing";
+import Extra from "../components/Home/extraFeatures/Extra";
+import Ebook from "../components/Home/ebook/Ebook";
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
       <Feature />
       <BussinessPricing />
       <Extra />
+      <Ebook />
     </div>
   );
 }
