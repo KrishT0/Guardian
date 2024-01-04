@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
-import classes from "../components/Vault/vault.module.css";
+import classes from "./modal.module.css";
+import Form from "../components/Vault/Form";
 
 const ModalComp = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,17 +15,17 @@ const ModalComp = () => {
   };
 
   return (
-    <div>
+    <div >
       <button onClick={openModal}>Add password</button>
       <Modal
+        ariaHideApp={false}
         isOpen={isOpen}
         onRequestClose={closeModal}
         className={classes.modal}
       >
-        <h1>Modal Content</h1>
-        <p>This is the content of the modal.</p>
-        <button onClick={closeModal}>Close Modal</button>
-      </Modal> 
+        <button onClick={closeModal} className={classes.modalCloseBtn}>❌</button>
+        <Form />
+      </Modal>
     </div>
   );
 };

@@ -18,9 +18,17 @@ function Dropdown({ handleShowPassword, handleEdit, handleDelete }) {
     handleDelete();
   };
 
+  function handleBlur() {
+    setTimeout(() => {
+      setOpen(false);
+    }, 500);
+  }
+
   return (
     <div className={classes.dropdown}>
-      <button onClick={toggle}>⋮</button>
+      <button onClick={toggle} onBlur={handleBlur}>
+        ⋮
+      </button>
       {open && (
         <ul className={classes.menu}>
           <li className={classes.menuItem}>

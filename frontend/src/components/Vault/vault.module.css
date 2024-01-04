@@ -49,8 +49,58 @@
 .modal{
  width: 50rem;
  height: 30rem;
- background: #171821;
+ background: #1E222A;
+ color: #9F8457;
  margin: 3rem auto;
  border-radius: 1rem;
  padding: 2rem;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.form label{
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+.form .inputElement{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items:flex-start;
+  width: 100%;
+}
+
+.form input{
+  background: #1E222A;
+  color: #9F8457;
+  border: 2px solid #9F8457;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  outline: none;
+  padding: 0.8rem;
+  width: 95%;
+}
+
+.form input:focus{
+  border: 3px solid #61AFEF;
+}
+
+.form button{
+  border: none;
+  width: 50%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+  background: #9F8457;
+  color: #1E222A;
+}
+
+.form span{
+  color: #FCA5A5;
 }

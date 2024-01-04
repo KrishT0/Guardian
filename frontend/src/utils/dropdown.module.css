@@ -34,3 +34,13 @@
   font: inherit;
   cursor: pointer;
 }
+
+.dropdown > button{
+  background: none;
+  color:#91a0b5 ;
+  font-weight: 700;
+  font-size: larger;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}

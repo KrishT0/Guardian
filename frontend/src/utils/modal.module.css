@@ -1,0 +1,20 @@
+.modal {
+  width: 50rem;
+  height: 30rem;
+  background: #1e222a;
+  color: #9f8457;
+  margin: 3rem auto;
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.modalCloseBtn {
+  align-self: flex-end;
+  background: none;
+  border: 3px solid #FCA5A5;
+  padding: 0.2rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
