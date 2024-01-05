@@ -38,11 +38,13 @@ function List({ info }) {
           password={info.password}
         />
       )}
-      <div className={classes.list} onClick={openModal}>
-        <p>{info.name}</p>
-        <p>{info.email}</p>
-        <p>{info.website}</p>
-        <p>{info.password}</p>
+      <div className={classes.wholeList}>
+        <div className={classes.list} onClick={openModal}>
+          <p>{info.name}</p>
+          <p>{info.email}</p>
+          <p>{info.website}</p>
+          <p>{info.password}</p>
+        </div>
         <div>
           <Dropdown
             handleShowPassword={handleShowPassword}
