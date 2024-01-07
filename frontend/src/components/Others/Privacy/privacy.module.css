@@ -1,0 +1,33 @@
+.back {
+  background: #171821;
+  color: #91a0b5;
+}
+
+.back h1 {
+  padding-top: 2rem;
+  margin-top: 0;
+}
+
+.back h2,
+h3,
+h4 {
+  font-weight: 400;
+  color: #86efac;
+}
+
+.mainText {
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.head {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.mainText p {
+  text-align: justify;
+  line-height: 1.3rem;
+}

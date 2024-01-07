@@ -11,6 +11,7 @@ import Pricing from "./components/Others/Pricing/Pricing";
 import Privacy from "./components/Others/Privacy/Privacy";
 import Works from "./components/Others/Works/Works";
 import Vault from "./pages/Vault";
+import SubscribeToUpdate from "./components/Others/Subscribe/SubscribeToUpdate";
 
 const router = createBrowserRouter([
   {
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
       {
         path: "vault",
         element: <Vault />,
+      },
+      {
+        path: "subscribe",
+        element: <SubscribeToUpdate />,
       },
     ],
   },

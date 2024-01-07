@@ -26,9 +26,10 @@ function PreFooter() {
           <Link to="/">
             <p>About</p>
           </Link>
-          <Link to="/">
+          <a href="https://github.com/KrishT0/Guardian">
             <p>Open Source</p>
-          </Link>
+          </a>
+
           <Link to="/">
             <p>Partners</p>
           </Link>

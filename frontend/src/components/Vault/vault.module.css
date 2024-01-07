@@ -50,12 +50,6 @@
   align-items: center;
 }
 
-.wholeList:hover,
-.list:hover {
-  background: #252d39;
-  transition: 300ms ease-in-out;
-}
-
 .list {
   display: flex;
   justify-content: space-between;
