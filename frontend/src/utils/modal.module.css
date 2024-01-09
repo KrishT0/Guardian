@@ -1,6 +1,6 @@
 .modal {
   width: 50rem;
-  height: 30rem;
+  max-height: max-content;
   background: #1e222a;
   color: #9f8457;
   margin: 3rem auto;
