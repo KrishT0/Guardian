@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Modal from "react-modal";
-import classes from "../components/Vault/vault.module.css";
+import classes from "./modal.module.css";
+import ModalForm from "./ModalForm";
 
-const ModalComp = () => {
+const ModalComp = ({ firstName, email, websiteUrl, password }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const openModal = () => {
@@ -15,16 +15,17 @@ const ModalComp = () => {
 
   return (
     <div>
-      <button onClick={openModal}>Add password</button>
-      <Modal
+      <button onClick={openModal} className={classes.modalBtn}>
+        Add password +
+      </button>
+      <ModalForm
         isOpen={isOpen}
-        onRequestClose={closeModal}
-        className={classes.modal}
-      >
-        <h1>Modal Content</h1>
-        <p>This is the content of the modal.</p>
-        <button onClick={closeModal}>Close Modal</button>
-      </Modal> 
+        closeModal={closeModal}
+        firstName={firstName}
+        email={email}
+        websiteUrl={websiteUrl}
+        password={password}
+      />
     </div>
   );
 };

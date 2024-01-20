@@ -1,0 +1,31 @@
+.modal {
+  width: 50rem;
+  max-height: max-content;
+  background: #1e222a;
+  color: #9f8457;
+  margin: 3rem auto;
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.modalCloseBtn {
+  align-self: flex-end;
+  background: none;
+  border: 3px solid #fca5a5;
+  padding: 0.2rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.modalBtn {
+  background: #171821;
+  font-size: larger;
+  color: #91a0b5;
+  font-weight: bold;
+  border: none;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
