@@ -11,6 +11,7 @@ import Pricing from "./components/Others/Pricing/Pricing";
 import Privacy from "./components/Others/Privacy/Privacy";
 import Works from "./components/Others/Works/Works";
 import Vault from "./pages/Vault";
+import PersonalPage from "./pages/PersonalPage";
 import SubscribeToUpdate from "./components/Others/Subscribe/SubscribeToUpdate";
 
 const router = createBrowserRouter([
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
           { path: "login", element: <Authentication mode={"login"} /> },
           { path: "sign-up", element: <Authentication mode={"sign-up"} /> },
         ],
+      },
+      {
+        path: "personal",
+        element: <PersonalPage/>
       },
       {
         path: "forget-password",

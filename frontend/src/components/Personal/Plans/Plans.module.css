@@ -1,0 +1,46 @@
+.section{
+    max-width: 1600px;
+    padding: 0 2rem;
+}
+.divs{
+    width: 90%;
+    background-color: black;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2rem;
+    padding: 5rem 0;
+}
+h1{
+    text-align: center;
+    color: white;
+}
+.items{
+    width: 60%;
+    margin: 1rem auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 3rem 0;
+}
+.items button{
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 1.9rem;
+    background-color: black;
+    color: white;
+}
+.price{
+    font-size: 3rem;
+}
+sup{
+    font-size: 1rem;
+}
+.div{
+    width: 80%;
+}
