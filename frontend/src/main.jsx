@@ -23,6 +23,37 @@ const router = createBrowserRouter([
         index: true,
         element: <Home />,
       },
+      {
+        path: "auth",
+        children: [
+          { path: "login", element: <Authentication mode={"login"} /> },
+          { path: "sign-up", element: <Authentication mode={"sign-up"} /> },
+        ],
+      },
+      {
+        path: "personal",
+        element: <PersonalPage/>
+      },
+      {
+        path: "forget-password",
+        element: <ForgetPassword />,
+      },
+      {
+        path: "pricing",
+        element: <Pricing />,
+      },
+      {
+        path: "privacy",
+        element: <Privacy />,
+      },
+      {
+        path: "works",
+        element: <Works />,
+      },
+      {
+        path: "vault",
+        element: <Vault />,
+      },
     ],
   },
 ]);
