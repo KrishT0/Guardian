@@ -1,15 +1,15 @@
-import React, { useState } from "react";
-import classes from "./pricing.module.css";
-import PersonalPricing from "./PersonalPricing";
-import BussinessPricing from "./BussinessPricing";
-import CoreFeatures from "./CoreFeatures";
+import React, { useState } from 'react';
+import classes from './pricing.module.css';
+import PersonalPricing from './PersonalPricing';
+import BussinessPricing from './BussinessPricing';
+import CoreFeatures from './CoreFeatures';
 
 function Pricing() {
-  const [priceMode, setPriceMode] = useState("personal");
+  const [priceMode, setPriceMode] = useState('personal');
 
   function priceclickHandler() {
     setPriceMode((prevMode) =>
-      prevMode === "personal" ? "bussiness" : "personal"
+      prevMode === 'personal' ? 'bussiness' : 'personal'
     );
   }
 
@@ -21,7 +21,7 @@ function Pricing() {
           <button
             onClick={priceclickHandler}
             className={`${classes.btn} ${
-              priceMode === "personal" && classes.active
+              priceMode === 'personal' && classes.active
             }`}
           >
             Personal
@@ -29,13 +29,13 @@ function Pricing() {
           <button
             onClick={priceclickHandler}
             className={`${classes.btn} ${
-              priceMode === "bussiness" && classes.active
+              priceMode === 'bussiness' && classes.active
             }`}
           >
             Bussiness
           </button>
         </div>
-        {priceMode === "personal" ? <PersonalPricing /> : <BussinessPricing />}
+        {priceMode === 'personal' ? <PersonalPricing /> : <BussinessPricing />}
         <p className={classes.finalP}>
           Pricing shown in USD. Enterprise plan based on annual subscription
         </p>

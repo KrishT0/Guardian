@@ -1,7 +1,7 @@
-import React from "react";
-import Modal from "react-modal";
-import Form from "../components/Vault/Form";
-import classes from "./modal.module.css";
+import React from 'react';
+import Modal from 'react-modal';
+import Form from '../components/Vault/Form';
+import classes from './modal.module.css';
 
 function ModalForm({
   isOpen,

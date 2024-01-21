@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import classes from "./vault.module.css";
-import Dropdown from "../../utils/Dropdown";
-import ModalForm from "../../utils/ModalForm";
+import React, { useState } from 'react';
+import classes from './vault.module.css';
+import Dropdown from '../../utils/Dropdown';
+import ModalForm from '../../utils/ModalForm';
 
 function List({ info }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,15 +15,15 @@ function List({ info }) {
   };
 
   const handleShowPassword = () => {
-    console.log("show password");
+    console.log('show password');
   };
 
   const handleEdit = () => {
-    console.log("edit");
+    console.log('edit');
   };
 
   const handleDelete = () => {
-    console.log("delete");
+    console.log('delete');
   };
 
   return (

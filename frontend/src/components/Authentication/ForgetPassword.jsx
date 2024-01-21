@@ -1,6 +1,6 @@
-import React from "react";
-import forgetPassword from "../../assets/forget-password.png";
-import classes from "./authentication.module.css";
+import React from 'react';
+import forgetPassword from '../../assets/forget-password.png';
+import classes from './authentication.module.css';
 
 function ForgetPassword() {
   return (

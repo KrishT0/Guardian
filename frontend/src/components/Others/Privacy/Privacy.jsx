@@ -1,5 +1,5 @@
-import React from "react";
-import classes from "./privacy.module.css";
+import React from 'react';
+import classes from './privacy.module.css';
 
 function Privacy() {
   return (

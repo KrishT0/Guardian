@@ -1,8 +1,8 @@
-import React from "react";
-import classes from "./hero.module.css";
+import React from 'react';
+import classes from './hero.module.css';
 
-import image from "../../../assets/website-demo.png";
-import { Link } from "react-router-dom";
+import image from '../../../assets/website-demo.png';
+import { Link } from 'react-router-dom';
 
 function HeroSection() {
   return (

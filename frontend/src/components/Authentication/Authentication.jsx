@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
-import Login from "./Login";
-import Signup from "./Signup";
-import classes from "./authentication.module.css";
-import auth from "../../assets/auth.png";
+import React, { useEffect, useState } from 'react';
+import Login from './Login';
+import Signup from './Signup';
+import classes from './authentication.module.css';
+import auth from '../../assets/auth.png';
 
 function Authentication({ mode }) {
-  const [authMode, setAuthMode] = useState("login");
+  const [authMode, setAuthMode] = useState('login');
 
   useEffect(() => {
     setAuthMode(mode);
@@ -17,7 +17,7 @@ function Authentication({ mode }) {
         <img src={auth} alt="" />
       </div>
       <div>
-        {authMode === "login" ? (
+        {authMode === 'login' ? (
           <Login setAuthMode={setAuthMode} />
         ) : (
           <Signup setAuthMode={setAuthMode} />

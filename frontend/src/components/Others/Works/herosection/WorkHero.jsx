@@ -1,7 +1,7 @@
-import React from "react";
-import classes from "./workhero.module.css";
-import heroImage from "../../../../assets/work-hero.png";
-import { Link } from "react-router-dom";
+import React from 'react';
+import classes from './workhero.module.css';
+import heroImage from '../../../../assets/work-hero.png';
+import { Link } from 'react-router-dom';
 
 function WorkHero() {
   return (

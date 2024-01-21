@@ -1,7 +1,7 @@
-import React from "react";
-import classes from "./subscribe.module.css";
-import subsImage from "../../../assets/subs.svg";
-import Form from "./Form";
+import React from 'react';
+import classes from './subscribe.module.css';
+import subsImage from '../../../assets/subs.svg';
+import Form from './Form';
 
 function SubscribeToUpdate() {
   return (

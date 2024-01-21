@@ -1,5 +1,5 @@
-import React from "react";
-import classes from "./sensitiveinfo.module.css";
+import React from 'react';
+import classes from './sensitiveinfo.module.css';
 
 function Info({ data }) {
   return (

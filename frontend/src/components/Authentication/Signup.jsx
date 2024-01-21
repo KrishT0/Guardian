@@ -1,10 +1,10 @@
-import React from "react";
-import classes from "./authentication.module.css";
+import React from 'react';
+import classes from './authentication.module.css';
 
 function Signup({ setAuthMode }) {
   function loginHandler(e) {
     e.preventDefault();
-    setAuthMode("login");
+    setAuthMode('login');
   }
 
   return (

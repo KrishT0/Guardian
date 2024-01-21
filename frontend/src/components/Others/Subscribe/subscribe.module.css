@@ -1,5 +1,5 @@
 .bg {
-  background: #A969BF;
+  background: #a969bf;
 }
 
 .container {
@@ -27,20 +27,19 @@
   margin-bottom: 2rem;
 }
 
-.left img{
-     width: 45rem;
-     object-fit: cover;
-     
+.left img {
+  width: 45rem;
+  object-fit: cover;
 }
 
 .form {
-     margin-top: 3rem;
-     background: white;
-     color: black;
-     width: 30rem;
-     height: max-content;
-     padding: 2rem;
-     border-radius: 1rem;
+  margin-top: 3rem;
+  background: white;
+  color: black;
+  width: 30rem;
+  height: max-content;
+  padding: 2rem;
+  border-radius: 1rem;
 }
 
 .form label {
@@ -48,30 +47,30 @@
   margin-bottom: 0.5rem;
 }
 
-.form input{
-     width: 95%;
-     padding: 0.5rem;
-     height: 2rem;
-     border: 3px solid lightgray;
-     border-radius: 5px;
-     margin-bottom: 1rem;
-     transition: all 0.4s ease;
+.form input {
+  width: 95%;
+  padding: 0.5rem;
+  height: 2rem;
+  border: 3px solid lightgray;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  transition: all 0.4s ease;
 }
 
-.form input:focus{
-     outline: none;
-     border: 3px solid #A969BF;
+.form input:focus {
+  outline: none;
+  border: 3px solid #a969bf;
 }
 
-.form button{
-     width: 30%;
-     padding: 0.5rem;
-     height: 2.5rem;
-     border: none;
-     border-radius: 1.5rem;
-     margin-bottom: 1rem;
-     background: #A969BF;
-     color: white;
-     cursor: pointer;
-     font-size: 1.1rem;
+.form button {
+  width: 30%;
+  padding: 0.5rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 1.5rem;
+  margin-bottom: 1rem;
+  background: #a969bf;
+  color: white;
+  cursor: pointer;
+  font-size: 1.1rem;
 }

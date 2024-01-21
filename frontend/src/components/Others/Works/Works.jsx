@@ -1,8 +1,8 @@
-import classes from "./work.module.css";
-import WorkHero from "./herosection/WorkHero";
-import SensitiveInfo from "./sensitiveinfo/SensitiveInfo";
-import AcountSelect from "./accountselect/AcountSelect";
-import GuardianSend from "./guardiansend/GuardianSend";
+import classes from './work.module.css';
+import WorkHero from './herosection/WorkHero';
+import SensitiveInfo from './sensitiveinfo/SensitiveInfo';
+import AcountSelect from './accountselect/AcountSelect';
+import GuardianSend from './guardiansend/GuardianSend';
 
 function Works() {
   return (

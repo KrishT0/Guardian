@@ -1,31 +1,31 @@
-import React from "react";
-import classes from "./coreFeatures.module.css";
-import CoreFeatureList from "./CoreFeatureList";
+import React from 'react';
+import classes from './coreFeatures.module.css';
+import CoreFeatureList from './CoreFeatureList';
 
 function CoreFeatures() {
   const data = [
     {
       list: [
-        "Open source security",
-        "Zero-knowledge encryption",
-        "Unlimited devices, unlimited passwords",
-        "Browser, Mobile, Desktop apps",
+        'Open source security',
+        'Zero-knowledge encryption',
+        'Unlimited devices, unlimited passwords',
+        'Browser, Mobile, Desktop apps',
       ],
     },
     {
       list: [
-        "Passkey management and usage",
-        "Store notes, credit cards, identities",
-        "Free sharing with another user",
-        "Bitwarden Send",
+        'Passkey management and usage',
+        'Store notes, credit cards, identities',
+        'Free sharing with another user',
+        'Bitwarden Send',
       ],
     },
     {
       list: [
-        "Username and password generator",
-        "Email alias integration",
-        "Advanced two-step login",
-        "Encrypted export",
+        'Username and password generator',
+        'Email alias integration',
+        'Advanced two-step login',
+        'Encrypted export',
       ],
     },
   ];

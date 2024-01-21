@@ -1,5 +1,5 @@
-import classes from "./account.module.css";
-import { Link } from "react-router-dom";
+import classes from './account.module.css';
+import { Link } from 'react-router-dom';
 
 function Account({ data }) {
   return (
