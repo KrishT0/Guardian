@@ -1,4 +1,4 @@
-import React from "react";
+/* eslint-disable react/prop-types */
 import { useForm } from "react-hook-form";
 import classes from "./vault.module.css";
 

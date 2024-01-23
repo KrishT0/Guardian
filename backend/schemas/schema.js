@@ -1,22 +1,37 @@
 import { gql } from "apollo-server-core";
 
  
-export const typeDefs=gql`
+export const typeDefs=gql`#graphql
 type Query{
     users: [User]
 }
 type User{
     _id: ID!
-    username: String!
+    name: String!
     email: String!
-    password: String!
+    master_password: String!
+}
+type Token{
+    token: String
 }
 type Mutation{
-    signup(userNew: UserInput!): User
+    register(userNew: UserInput!): User
+    login(userSignin: UserSigninInput!): Token
+    createVaultDoc(vaultDoc: VaultInput!): String
 }
-type UserInput{
-    email: String
-    username: String
-    password: String
+input UserSigninInput{
+    email: String!
+    master_password: String!
+}
+input UserInput{
+    email: String!
+    name: String!
+    master_password: String!
+}
+input VaultInput{
+    name: String!
+    email: String!
+    phone_number: Int
+    password: String!
 }
 `;
