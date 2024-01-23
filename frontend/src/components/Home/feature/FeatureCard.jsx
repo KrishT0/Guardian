@@ -1,5 +1,5 @@
-import React from "react";
-import classes from "./feature.module.css";
+import React from 'react';
+import classes from './feature.module.css';
 
 function FeatureCard({ image, head, desc }) {
   return (

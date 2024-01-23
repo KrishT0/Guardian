@@ -1,8 +1,8 @@
-import React from "react";
-import classes from "./footer.module.css";
-import instagram from "../../assets/instagram.png";
-import facebook from "../../assets/facebook.png";
-import x from "../../assets/x.png";
+import React from 'react';
+import classes from './footer.module.css';
+import instagram from '../../assets/instagram.png';
+import facebook from '../../assets/facebook.png';
+import x from '../../assets/x.png';
 
 function Footer() {
   return (

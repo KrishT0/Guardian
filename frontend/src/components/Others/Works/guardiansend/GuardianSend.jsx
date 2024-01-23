@@ -1,5 +1,5 @@
-import classes from "./guardiansend.module.css";
-import keyLock from "../../../../assets/choose-account.png";
+import classes from './guardiansend.module.css';
+import keyLock from '../../../../assets/choose-account.png';
 
 function GuardianSend() {
   return (

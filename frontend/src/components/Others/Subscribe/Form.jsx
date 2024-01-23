@@ -1,5 +1,5 @@
-import React from "react";
-import classes from "./subscribe.module.css";
+import React from 'react';
+import classes from './subscribe.module.css';
 
 function Form() {
   return (

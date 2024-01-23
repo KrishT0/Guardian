@@ -1,5 +1,5 @@
-import React from "react";
-import classes from "./coreFeatures.module.css";
+import React from 'react';
+import classes from './coreFeatures.module.css';
 
 function CoreFeatureList({ list }) {
   return (

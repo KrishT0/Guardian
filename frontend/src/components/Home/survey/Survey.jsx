@@ -1,6 +1,5 @@
-import React from "react";
-import classes from "./survey.module.css";
-
+import React from 'react';
+import classes from './survey.module.css';
 
 function Survey() {
   return (

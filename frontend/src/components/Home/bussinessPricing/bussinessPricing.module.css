@@ -6,7 +6,7 @@
   align-items: center;
   gap: 0.5rem;
   padding-bottom: 2rem;
-  background: black;
+  background: #171821;
   color: white;
   border-radius: 1.5rem;
   flex-direction: column;
@@ -24,12 +24,12 @@
   font-weight: 500;
   background: white;
   cursor: pointer;
-  color: black;
+  color: #171821;
   transition: all 0.3s ease;
 }
 
 .section button:hover {
-  background: black;
+  background: #171821;
   color: white;
   border: 2px solid white;
 }

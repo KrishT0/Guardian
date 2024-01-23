@@ -1,46 +1,46 @@
-.section{
-    max-width: 1600px;
-    padding: 0 2rem;
+.section {
+  max-width: 1600px;
+  padding: 0 2rem;
 }
-.features{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
-.feature{
-    width: 40%;
-    padding: 2rem;
-    background-color: #f3f6f9;
-    margin-bottom: 2rem;
-    border-radius: 2rem;
-    font-size: large;
+.feature {
+  width: 40%;
+  padding: 2rem;
+  background-color: #f3f6f9;
+  margin-bottom: 2rem;
+  border-radius: 2rem;
+  font-size: large;
 }
-.feature img{
-    max-width: 5rem;
+.feature img {
+  max-width: 5rem;
 }
-.heading{
-    text-align: center;
-    margin: 2rem 0;
-    font-size: larger;
+.heading {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: larger;
 }
-.button{
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    margin: 2rem 0 4rem 0;
+.button {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0 4rem 0;
 }
-.btn{
-    padding: 0.8rem 1.5rem;
-    border-radius: 1.5rem;
-    font-size: 1.1rem;
-    font-weight: 500;
-    background: black;
-    color: white;
-    cursor: pointer;
-    transition: all 0.3s ease;
+.btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  background: black;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.btn:hover{
-    background: white;
-    color: black;;
+.btn:hover {
+  background: white;
+  color: black;
 }

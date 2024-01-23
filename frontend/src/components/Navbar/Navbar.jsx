@@ -1,6 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import classes from "./navbar.module.css";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import classes from './navbar.module.css';
 
 function Navbar() {
   return (

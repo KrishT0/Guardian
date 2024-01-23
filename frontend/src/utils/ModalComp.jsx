@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import classes from "./modal.module.css";
-import ModalForm from "./ModalForm";
+import React, { useState } from 'react';
+import classes from './modal.module.css';
+import ModalForm from './ModalForm';
 
 const ModalComp = ({ firstName, email, websiteUrl, password }) => {
   const [isOpen, setIsOpen] = useState(false);

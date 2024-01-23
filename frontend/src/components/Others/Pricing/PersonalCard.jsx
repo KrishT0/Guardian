@@ -1,5 +1,5 @@
-import React from "react";
-import classes from "./pricing.module.css";
+import React from 'react';
+import classes from './pricing.module.css';
 
 function PersonalCard({
   heading,

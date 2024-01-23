@@ -1,7 +1,7 @@
-import React from "react";
-import Table from "../components/Vault/Table";
-import classes from "../components/Vault/vault.module.css";
-import Modal from "../utils/ModalComp";
+import React from 'react';
+import Table from '../components/Vault/Table';
+import classes from '../components/Vault/vault.module.css';
+import Modal from '../utils/ModalComp';
 
 function Vault() {
   return (

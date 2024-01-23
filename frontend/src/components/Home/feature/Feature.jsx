@@ -1,27 +1,27 @@
-import React from "react";
-import FeatureCard from "./FeatureCard";
-import classes from "./feature.module.css";
+import React from 'react';
+import FeatureCard from './FeatureCard';
+import classes from './feature.module.css';
 
-import lockImage from "../../../assets/lock-eye.png";
-import clockImage from "../../../assets/clock.png";
-import device from "../../../assets/device.png";
+import lockImage from '../../../assets/lock-eye.png';
+import clockImage from '../../../assets/clock.png';
+import device from '../../../assets/device.png';
 
 function Feature() {
   const data = [
     {
       img: clockImage,
-      head: "Powerful security within minutes",
-      desc: "For those who want to do more, secure more, and collaborate more, Bitwarden is fast and easy to set up for both individuals and businesses.",
+      head: 'Powerful security within minutes',
+      desc: 'For those who want to do more, secure more, and collaborate more, Bitwarden is fast and easy to set up for both individuals and businesses.',
     },
     {
       img: device,
-      head: "Unlimited passwords, unlimited devices",
-      desc: "Cross platform access for mobile, browser, and desktop apps. Supported in over 50 languages.",
+      head: 'Unlimited passwords, unlimited devices',
+      desc: 'Cross platform access for mobile, browser, and desktop apps. Supported in over 50 languages.',
     },
     {
       img: lockImage,
       head: "Protect what's important to you",
-      desc: "Zero knowledge, end-to-end encryption guides the Bitwarden open source approach to trust, accountability, and security.",
+      desc: 'Zero knowledge, end-to-end encryption guides the Bitwarden open source approach to trust, accountability, and security.',
     },
   ];
 
