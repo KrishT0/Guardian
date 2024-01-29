@@ -10,18 +10,9 @@ function Navbar() {
         <Link to="/" className={classes.btn}>
           Home
         </Link>
-        <Link to="/personal" className={classes.btn}>
-          Personal
-        </Link>
-        <Link to="/bussiness" className={classes.btn}>
-          Bussiness
-        </Link>
-        <Link to="/pricing" className={classes.btn}>
-          Pricing
-        </Link>
-        <Link to="/ola" className={classes.btn}>
-          Help
-        </Link>
+        <a href="https://github.com" className={classes.btn}>
+          Source code
+        </a>
       </div>
       <div>
         <Link to="/auth/sign-up" className={classes.btn}>
