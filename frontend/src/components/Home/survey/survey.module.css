@@ -33,3 +33,16 @@
   color: white;
   border: 2px solid white;
 }
+
+@media (max-width: 1199px) {
+  .section {
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    flex-direction: column;
+    border-radius: 0;
+  }
+}

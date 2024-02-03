@@ -36,3 +36,13 @@
 .card img {
   width: 6rem;
 }
+
+@media (max-width: 900px) {
+  .feature {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
