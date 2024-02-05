@@ -1,12 +1,12 @@
 footer {
   display: flex;
   justify-content: center;
-  gap: 50rem;
+  gap: 20dvw;
   align-items: center;
   height: 5rem;
   background: #171821;
-  border-top: 2px solid #eaccf4;
   color: white;
+  margin: 0;
 }
 
 .box {
@@ -15,11 +15,28 @@ footer {
   align-items: center;
 }
 
+.box p {
+  margin: 0;
+}
 .box a {
   text-decoration: none;
+  color: white;
 }
 
-.box img {
+.logo {
   width: 2rem;
   height: 2rem;
+}
+
+@media (max-width: 420px) {
+  footer {
+    gap: 12px;
+    justify-content: space-between;
+    padding: 0 12px;
+  }
+
+  .logo {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 }

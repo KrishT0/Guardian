@@ -6,24 +6,31 @@
 .cardGroup {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
 }
 
-.card {
+.card,
+.cardSecond {
   display: flex;
   justify-content: center;
   gap: 7.5rem;
   align-items: center;
   margin-bottom: 3.5rem;
+  background: #f3f6f9;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
-.card h1 {
+.card h1,
+.cardSecond h1 {
   font-size: 2rem;
   font-weight: 400;
   margin: 1rem;
 }
 
-.card p {
+.card p,
+.cardSecond p {
   font-size: 1.2rem;
 }
 
@@ -33,6 +40,37 @@
   width: 70%;
 }
 
-.card img {
+.card img,
+.cardSecond img {
   width: 10rem;
+}
+
+@media (max-width: 1000px) {
+  .card {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    margin: 1rem 1rem;
+  }
+
+  .cardSecond {
+    flex-direction: column-reverse;
+    gap: 1rem;
+    text-align: center;
+    margin: 1rem 1rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .card h1,
+  .cardSecond h1 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 0.6rem;
+  }
+
+  .card p,
+  .cardSecond p {
+    font-size: 1.1rem;
+  }
 }

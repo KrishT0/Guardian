@@ -44,5 +44,14 @@
   .section {
     flex-direction: column;
     border-radius: 0;
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+  .section p {
+    text-align: center;
+  }
+  .section button {
+    height: 3rem;
+    padding: 0 0.5rem;
   }
 }
