@@ -1,28 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import classes from './navbar.module.css';
+import logoImage from '../../assets/web-icon.svg';
 
 function Navbar() {
   return (
     <nav>
-      <div>Logo</div>
-      <div className={classes.center}>
+      <Link to="/" className={classes.logo}>
+        <img src={logoImage} alt="logo" />
+      </Link>
+      {/* <div className={classes.center}>
         <Link to="/" className={classes.btn}>
           Home
         </Link>
-        <Link to="/personal" className={classes.btn}>
-          Personal
-        </Link>
-        <Link to="/bussiness" className={classes.btn}>
-          Bussiness
-        </Link>
-        <Link to="/pricing" className={classes.btn}>
-          Pricing
-        </Link>
-        <Link to="/ola" className={classes.btn}>
-          Help
-        </Link>
-      </div>
+        <a href="https://github.com" className={classes.btn}>
+          Source code
+        </a>
+      </div> */}
       <div>
         <Link to="/auth/sign-up" className={classes.btn}>
           Get Started

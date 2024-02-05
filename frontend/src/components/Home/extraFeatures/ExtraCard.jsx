@@ -18,7 +18,7 @@ function ExtraCard({
           <p>{leftDescription}</p>
         </div>
       </div>
-      <div className={classes.card}>
+      <div className={classes.cardSecond}>
         <div className={classes.side}>
           <h1>{rightHeading}</h1>
           <p>{rightDescription}</p>

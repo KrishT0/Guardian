@@ -8,13 +8,23 @@ nav {
   margin: 0 auto;
   background: #171821;
   color: white;
-  height: 3rem;
+  height: 5rem;
   font-size: 2rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(218, 218, 218, 0.2);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 3rem;
+  height: 3rem;
 }
 
 .btn {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.5rem;
   border: none;
   border-radius: 5px;
   background: #171821;
@@ -24,7 +34,20 @@ nav {
   text-decoration: none;
 }
 
-.center {
+/* .center {
   display: flex;
   gap: 1rem;
+} */
+
+@media (max-width: 450px) {
+  /* .logo img {
+    width: 2rem;
+    height: 2rem;
+  } */
+  .btn {
+    font-size: 1rem;
+  }
+  nav {
+    height: 4.5rem;
+  }
 }

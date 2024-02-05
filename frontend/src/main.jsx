@@ -1,10 +1,14 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
 import Root from './Root';
 import Error from './pages/Error';
 import Home from './pages/Home';
+import ProtectedRoutes from './utils/ProtectedRoute';
+import store from './store/store';
+
 import Authentication from './components/Authentication/Authentication';
 import ForgetPassword from './components/Authentication/ForgetPassword';
 import Pricing from './components/Others/Pricing/Pricing';
@@ -53,7 +57,13 @@ const router = createBrowserRouter([
       },
       {
         path: 'vault',
-        element: <Vault />,
+        element: <ProtectedRoutes />,
+        children: [
+          {
+            path: '',
+            element: <Vault />,
+          },
+        ],
       },
       {
         path: 'subscribe',
@@ -65,6 +75,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   // <React.StrictMode>
-  <RouterProvider router={router} />
+  <Provider store={store}>
+    <RouterProvider router={router} />
+  </Provider>
   // </React.StrictMode>
 );

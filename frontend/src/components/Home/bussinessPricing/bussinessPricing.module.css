@@ -33,3 +33,23 @@
   color: white;
   border: 2px solid white;
 }
+
+@media (max-width: 1199px) {
+  .section {
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 650px) {
+  .section p {
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 1rem;
+  }
+
+  .section button {
+    height: 3rem;
+    padding: 0 0.5rem;
+    font-size: 1rem;
+  }
+}

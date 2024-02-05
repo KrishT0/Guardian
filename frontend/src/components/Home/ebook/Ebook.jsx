@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './ebook.module.css';
 
-import book from '../../../assets/message.png';
+import book from '../../../assets/message.svg';
 
 function Ebook() {
   return (
@@ -14,7 +14,9 @@ function Ebook() {
           safeguard your company's assets and reputation from cyber criminals in
           her latest eBook.
         </p>
-        <button>Get the eBook</button>
+        <div>
+          <button>Get the eBook</button>
+        </div>
       </div>
     </section>
   );

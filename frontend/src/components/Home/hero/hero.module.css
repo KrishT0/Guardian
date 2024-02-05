@@ -21,6 +21,7 @@
   font-size: 3rem;
   letter-spacing: 0.1rem;
   margin-bottom: 0;
+  color: #171821;
 }
 .left p {
   font-size: 1.1rem;
@@ -47,6 +48,50 @@
 }
 
 .btn:hover {
-  background: #ebe5e5;
+  background: #f3f6f9;
   color: #171821;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .left {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .right {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .left h1 {
+    font-size: 2.5rem;
+  }
+
+  .left p {
+    font-size: 1rem;
+  }
+
+  .btnGroup {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .left h1 {
+    letter-spacing: 0;
+    font-size: 2rem;
+  }
 }
