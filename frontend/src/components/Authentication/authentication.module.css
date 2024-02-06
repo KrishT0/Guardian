@@ -19,7 +19,7 @@
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
-  background: rgb(239, 239, 239);
+  background: #f3f6f9;
 }
 
 .loginform label {
@@ -49,13 +49,7 @@
   cursor: pointer;
 }
 
-.loginform p,
-.loginform a {
-  text-align: center;
-  text-decoration: none;
-}
-
-.signUpform .btn {
+.loginform .btn {
   margin-top: 0.5rem;
   padding: 0.2rem;
   border: none;
@@ -64,7 +58,14 @@
   font-size: 1rem;
   cursor: pointer;
 }
-.loginform .btn {
+.loginform p,
+.loginform a {
+  text-align: center;
+  text-decoration: none;
+}
+
+/* signup */
+.signUpform .btn {
   margin-top: 0.5rem;
   padding: 0.2rem;
   border: none;
@@ -81,7 +82,7 @@
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
-  background: rgb(239, 239, 239);
+  background: #f3f6f9;
 }
 
 .signUpform label {
@@ -117,6 +118,7 @@
   text-decoration: none;
 }
 
+/* forget */
 .forget {
   margin-top: 0;
   color: blueviolet;
@@ -130,7 +132,7 @@
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
-  background: rgb(239, 239, 239);
+  background: #f3f6f9;
 }
 
 .forgetForm label {
