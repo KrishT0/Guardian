@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import classes from './dropdown.module.css';
 
-function Dropdown({ handleShowPassword, handleEdit, handleDelete }) {
+function Dropdown({ handleShowPassword, handleEdit, handleDelete, data }) {
   const [open, setOpen] = useState(false);
 
   const toggle = () => setOpen((prevState) => !prevState);
 
   const ShowPassword = () => {
-    handleShowPassword();
+    handleShowPassword(data.password);
   };
 
   const Edit = () => {
