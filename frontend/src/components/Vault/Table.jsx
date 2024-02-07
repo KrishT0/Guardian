@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BsThreeDots } from 'react-icons/bs'; // Import the three-dot icon
+import { BsThreeDots } from 'react-icons/bs';
 import classes from './vault.module.css';
 import List from './List';
 import tableData from './data.json';
@@ -9,7 +9,32 @@ import ModalForm from '../../utils/ModalForm';
 
 function Table() {
   const [isOpen, setIsOpen] = useState(false);
+  const [selectedRowData, setSelectedRowData] = useState(null); // Track selected row data
+
   const data = tableData;
+
+  const openModal = (row) => {
+    setSelectedRowData(row.original);
+    setIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setSelectedRowData(null); // Clear selected row data when closing modal
+    setIsOpen(false);
+  };
+
+  const handleShowPassword = (data) => {
+    console.log('password: ', data);
+  };
+
+  const handleEdit = () => {
+    console.log('edit');
+  };
+
+  const handleDelete = () => {
+    console.log('delete');
+  };
+
   const columns = [
     {
       Header: 'Name',
@@ -32,9 +57,9 @@ function Table() {
       accessor: 'actions',
       Cell: ({ row }) => (
         <Dropdown
-          handleShowPassword={handleShowPassword}
-          handleEdit={handleEdit}
-          handleDelete={handleDelete}
+          handleShowPassword={() => handleShowPassword(row.original)}
+          handleEdit={() => handleEdit(row.original)}
+          handleDelete={() => handleDelete(row.original)}
           data={row.original}
         />
       ),
@@ -61,25 +86,6 @@ function Table() {
     usePagination
   );
 
-  // const openModal = () => {
-  //   setIsOpen(true);
-  // };
-
-  // const closeModal = () => {
-  //   setIsOpen(false);
-  // };
-
-  const handleShowPassword = (data) => {
-    console.log('password: ', data);
-  };
-
-  const handleEdit = () => {
-    console.log('edit');
-  };
-
-  const handleDelete = () => {
-    console.log('delete');
-  };
   return (
     <>
       <main>
@@ -87,13 +93,11 @@ function Table() {
           <thead>
             {headerGroups.map((hg) => (
               <tr {...hg.getHeaderGroupProps()}>
-                {hg.headers.map((header) => {
-                  return (
-                    <th {...header.getHeaderProps()}>
-                      {header.render('Header')}
-                    </th>
-                  );
-                })}
+                {hg.headers.map((header) => (
+                  <th {...header.getHeaderProps()}>
+                    {header.render('Header')}
+                  </th>
+                ))}
               </tr>
             ))}
           </thead>
@@ -101,12 +105,10 @@ function Table() {
             {page.map((row) => {
               prepareRow(row);
               return (
-                <tr {...row.getRowProps()}>
-                  {row.cells.map((cell) => {
-                    return (
-                      <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
-                    );
-                  })}
+                <tr {...row.getRowProps()} onClick={() => openModal(row)}>
+                  {row.cells.map((cell) => (
+                    <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
+                  ))}
                 </tr>
               );
             })}
@@ -124,16 +126,16 @@ function Table() {
           </button>
         </div>
       </main>
-      {/* {isOpen && (
+      {isOpen && (
         <ModalForm
           isOpen={true}
           closeModal={closeModal}
-          firstName={info.name}
-          email={info.email}
-          websiteUrl={info.website}
-          password={info.password}
+          firstName={selectedRowData?.name}
+          email={selectedRowData?.email}
+          websiteUrl={selectedRowData?.website}
+          password={selectedRowData?.password}
         />
-      )} */}
+      )}
     </>
   );
 }
