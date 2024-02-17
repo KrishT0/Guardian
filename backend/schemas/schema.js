@@ -1,63 +1,63 @@
-import { gql } from "apollo-server-core";
+import { gql } from 'apollo-server-core';
 
- 
-export const typeDefs=gql`#graphql
-type Query{
+export const typeDefs = gql`
+  #graphql
+  type Query {
     vaultData: [Vault]
-}
-type User{
+  }
+  type User {
     _id: ID!
     name: String!
     email: String!
     master_password: String!
-}
-type Token{
+  }
+  type Token {
     token: String
-}
-type Mutation{
+  }
+  type Mutation {
     register(userNew: UserInput!): User
     login(userSignin: UserSigninInput!): Token
     logout(userEmail: String): String
     createVaultDoc(vaultDoc: VaultInput!): Response
     updateVaultDoc(vaultDoc: UpdateVaultInput): String
-}
-input UserSigninInput{
+  }
+  input UserSigninInput {
     email: String!
     master_password: String!
-}
-input UserInput{
+  }
+  input UserInput {
     email: String!
     name: String!
     master_password: String!
-}
-input VaultInput{
+  }
+  input VaultInput {
     name: String!
     email: String!
     phone_number: String
     password: String!
-}
-type Vault{
+  }
+  type Vault {
     _id: String!
     name: String!
     email: String!
     phone_number: String
     password: String!
-}
-input UpdateVaultInput{
+  }
+  input UpdateVaultInput {
     _id: String!
     vault: updatedInput
-}
-input updatedInput{
+  }
+  input updatedInput {
     name: String
     email: String
     phone_number: String
     password: String
-}
-type Response{
+  }
+  type Response {
     message: String
     data: id
-}
-type id{
+  }
+  type id {
     _id: String
-}
+  }
 `;
