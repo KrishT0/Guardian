@@ -5,13 +5,17 @@ const userSchema=new Schema({
         type: String,
         required: true
     },
-    username: {
+    name: {
         type: String,
         required : true,
     },
-    password: {
+    master_password: {
         type: String,
         required: true,
+    },
+    vault: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Vault"
     }
 })
-mongoose.model("User",userSchema);
+export default mongoose.model("User",userSchema);
