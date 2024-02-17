@@ -3,7 +3,7 @@ import { gql } from "apollo-server-core";
  
 export const typeDefs=gql`#graphql
 type Query{
-    users: [User]
+    vaultData: [Vault]
 }
 type User{
     _id: ID!
@@ -17,7 +17,9 @@ type Token{
 type Mutation{
     register(userNew: UserInput!): User
     login(userSignin: UserSigninInput!): Token
-    createVaultDoc(vaultDoc: VaultInput!): String
+    logout(userEmail: String): String
+    createVaultDoc(vaultDoc: VaultInput!): Response
+    updateVaultDoc(vaultDoc: UpdateVaultInput): String
 }
 input UserSigninInput{
     email: String!
@@ -31,7 +33,31 @@ input UserInput{
 input VaultInput{
     name: String!
     email: String!
-    phone_number: Int
+    phone_number: String
     password: String!
+}
+type Vault{
+    _id: String!
+    name: String!
+    email: String!
+    phone_number: String
+    password: String!
+}
+input UpdateVaultInput{
+    _id: String!
+    vault: updatedInput
+}
+input updatedInput{
+    name: String
+    email: String
+    phone_number: String
+    password: String
+}
+type Response{
+    message: String
+    data: id
+}
+type id{
+    _id: String
 }
 `;
