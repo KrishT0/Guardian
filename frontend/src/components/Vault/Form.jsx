@@ -2,11 +2,8 @@
 import { useForm } from "react-hook-form";
 import classes from "./vault.module.css";
 
-function Form({ firstNameProp, emailProp, websiteUrlProp, passwordProp }) {
-  let firstNameStore = firstNameProp ? firstNameProp : "";
-  let emailStore = emailProp ? emailProp : "";
-  let websiteUrlStore = websiteUrlProp ? websiteUrlProp : "";
-  let passwordStore = passwordProp ? passwordProp : "";
+function Form({ data}) {
+  
 
   const {
     register,
@@ -14,10 +11,10 @@ function Form({ firstNameProp, emailProp, websiteUrlProp, passwordProp }) {
     formState: { errors },
   } = useForm({
     defaultValues: {
-      firstName: firstNameStore,
-      email: emailStore,
-      websiteUrl: websiteUrlStore,
-      password: passwordStore,
+      firstName: data?.name || "",
+      email: data?.email || "",
+      websiteUrl: data?.website || "",
+      password: data?.password || "",
     },
   });
   const onSubmitForm = (data) => console.log(data);
