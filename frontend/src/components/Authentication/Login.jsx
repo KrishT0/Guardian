@@ -40,7 +40,7 @@ function Login({ setAuthMode }) {
         }}
         render={({ field }) => <input type="text" {...field} />}
       />
-      {errors.email && <p>{errors.email.message}</p>}
+      {errors.email && <p className={classes.error}>{errors.email.message}</p>}
 
       <label htmlFor="password">Master Password</label>
       <Controller
@@ -49,7 +49,9 @@ function Login({ setAuthMode }) {
         rules={{ required: 'Password is required' }}
         render={({ field }) => <input type="password" {...field} />}
       />
-      {errors.password && <p>{errors.password.message}</p>}
+      {errors.password && (
+        <p className={classes.error}>{errors.password.message}</p>
+      )}
 
       <button className={classes.tpButton} type="submit">
         Login
