@@ -1,143 +1,101 @@
-import React, { useState } from 'react';
-import { BsThreeDots } from 'react-icons/bs';
-import classes from './vault.module.css';
-import List from './List';
-import tableData from './data.json';
-import { useTable, usePagination } from 'react-table';
-import Dropdown from '../../utils/Dropdown';
-import ModalForm from '../../utils/ModalForm';
+/* eslint-disable react/prop-types */
+import React from "react";
+import "./table.css";
+import {
+  useReactTable,
+  flexRender,
+  getCoreRowModel,
+  getPaginationRowModel,
+} from "@tanstack/react-table";
+// import dataJSON from "./data.json";
 
-function Table() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [selectedRowData, setSelectedRowData] = useState(null); // Track selected row data
+const Table = ({columnDef,dataJSON}) => {
+  const finalData = React.useMemo(() => dataJSON, [dataJSON]);
+  const finalColumnDef = React.useMemo(() => columnDef, [columnDef]);
 
-  const data = tableData;
+  const tableInstance = useReactTable({
+    columns: finalColumnDef,
+    data: finalData,  
+    getCoreRowModel: getCoreRowModel(),
+    getPaginationRowModel: getPaginationRowModel(),
+  });
 
-  const openModal = (row) => {
-    setSelectedRowData(row.original);
-    setIsOpen(true);
-  };
-
-  const closeModal = () => {
-    setSelectedRowData(null); // Clear selected row data when closing modal
-    setIsOpen(false);
-  };
-
-  const handleShowPassword = (data) => {
-    console.log('password: ', data);
-  };
-
-  const handleEdit = () => {
-    console.log('edit');
-  };
-
-  const handleDelete = () => {
-    console.log('delete');
-  };
-
-  const columns = [
-    {
-      Header: 'Name',
-      accessor: 'name',
-    },
-    {
-      Header: 'Email',
-      accessor: 'email',
-    },
-    {
-      Header: 'Website',
-      accessor: 'website',
-    },
-    {
-      Header: 'Password',
-      accessor: 'password',
-    },
-    {
-      Header: <BsThreeDots />,
-      accessor: 'actions',
-      Cell: ({ row }) => (
-        <Dropdown
-          handleShowPassword={() => handleShowPassword(row.original)}
-          handleEdit={() => handleEdit(row.original)}
-          handleDelete={() => handleDelete(row.original)}
-          data={row.original}
-        />
-      ),
-    },
-  ];
-
-  const {
-    getTableProps,
-    getTableBodyProps,
-    headerGroups,
-    page,
-    prepareRow,
-    nextPage,
-    previousPage,
-    canPreviousPage,
-    canNextPage,
-    state: { pageIndex },
-    pageCount,
-  } = useTable(
-    {
-      columns,
-      data,
-    },
-    usePagination
-  );
+  //   console.log("test", tableInstance.getHeaderGroups());
 
   return (
     <>
-      <main>
-        <table {...getTableProps()}>
-          <thead>
-            {headerGroups.map((hg) => (
-              <tr {...hg.getHeaderGroupProps()}>
-                {hg.headers.map((header) => (
-                  <th {...header.getHeaderProps()}>
-                    {header.render('Header')}
-                  </th>
-                ))}
+      <table>
+        <thead>
+          {tableInstance.getHeaderGroups().map((headerEl) => {
+            return (
+              <tr key={headerEl.id}>
+                {headerEl.headers.map((columnEl) => {
+                  return (
+                    <th key={columnEl.id} colSpan={columnEl.colSpan}>
+                      {columnEl.isPlaceholder
+                        ? null
+                        : flexRender(
+                            columnEl.column.columnDef.header,
+                            columnEl.getContext()
+                          )}
+                    </th>
+                  );
+                })}
               </tr>
-            ))}
-          </thead>
-          <tbody {...getTableBodyProps}>
-            {page.map((row) => {
-              prepareRow(row);
-              return (
-                <tr {...row.getRowProps()} onClick={() => openModal(row)}>
-                  {row.cells.map((cell) => (
-                    <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
-                  ))}
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-        <div>
-          <button disabled={!canPreviousPage} onClick={previousPage}>
-            Prev
-          </button>
-          <span>
-            {pageIndex + 1} of {pageCount}
-          </span>
-          <button disabled={!canNextPage} onClick={nextPage}>
-            Next
-          </button>
-        </div>
-      </main>
-      {isOpen && (
-        <ModalForm
-          isOpen={true}
-          closeModal={closeModal}
-          firstName={selectedRowData?.name}
-          email={selectedRowData?.email}
-          websiteUrl={selectedRowData?.website}
-          password={selectedRowData?.password}
-        />
-      )}
+            );
+          })}
+        </thead>
+        <tbody>
+          {tableInstance.getRowModel().rows.map((rowEl) => {
+            return (
+              <tr key={rowEl.id}>
+                {rowEl.getVisibleCells().map((cellEl) => {
+                  return (
+                    <td key={cellEl.id}>
+                      {flexRender(
+                        cellEl.column.columnDef.cell,
+                        cellEl.getContext()
+                      )}
+                    </td>
+                  );
+                })}
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+      <hr />
+      <div>
+        <button
+          onClick={() => tableInstance.setPageIndex(0)}
+          disabled={!tableInstance.getCanPreviousPage()}
+        >
+          {"<<"}
+        </button>
+        <button
+          onClick={() => tableInstance.previousPage()}
+          disabled={!tableInstance.getCanPreviousPage()}
+        >
+          Previous Page
+        </button>
+        <button
+          onClick={() => tableInstance.nextPage()}
+          disabled={!tableInstance.getCanNextPage()}
+        >
+          Next Page
+        </button>
+        <button
+          onClick={() =>
+            tableInstance.setPageIndex(tableInstance.getPageCount() - 1)
+          }
+          disabled={!tableInstance.getCanNextPage()}
+        >
+          {">>"}
+        </button>
+      </div>
+      <hr />
     </>
   );
-}
+};
 
 export default Table;
