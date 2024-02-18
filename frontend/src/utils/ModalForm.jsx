@@ -1,4 +1,4 @@
-import React from 'react';
+/* eslint-disable react/prop-types */
 import Modal from 'react-modal';
 import Form from '../components/Vault/Form';
 import classes from './modal.module.css';
@@ -6,10 +6,7 @@ import classes from './modal.module.css';
 function ModalForm({
   isOpen,
   closeModal,
-  firstName,
-  email,
-  websiteUrl,
-  password,
+  data
 }) {
   return (
     <>
@@ -23,10 +20,7 @@ function ModalForm({
           ❌
         </button>
         <Form
-          firstNameProp={firstName}
-          emailProp={email}
-          websiteUrlProp={websiteUrl}
-          passwordProp={password}
+          data={data}
         />
       </Modal>
     </>
