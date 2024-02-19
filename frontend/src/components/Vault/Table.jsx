@@ -51,7 +51,7 @@ const Table = ({columnDef,dataJSON}) => {
               <tr key={rowEl.id}>
                 {rowEl.getVisibleCells().map((cellEl) => {
                   return (
-                    <td key={cellEl.id}>
+                    <td key={cellEl.id} data-cell={cellEl.column.columnDef.header}>
                       {flexRender(
                         cellEl.column.columnDef.cell,
                         cellEl.getContext()
@@ -65,22 +65,25 @@ const Table = ({columnDef,dataJSON}) => {
         </tbody>
       </table>
       <hr />
-      <div>
+      <div className="actions">
         <button
           onClick={() => tableInstance.setPageIndex(0)}
           disabled={!tableInstance.getCanPreviousPage()}
+          className="actionBtn"
         >
           {"<<"}
         </button>
         <button
           onClick={() => tableInstance.previousPage()}
           disabled={!tableInstance.getCanPreviousPage()}
+          className="actionBtn"
         >
           Previous Page
         </button>
         <button
           onClick={() => tableInstance.nextPage()}
           disabled={!tableInstance.getCanNextPage()}
+          className="actionBtn"
         >
           Next Page
         </button>
@@ -89,6 +92,7 @@ const Table = ({columnDef,dataJSON}) => {
             tableInstance.setPageIndex(tableInstance.getPageCount() - 1)
           }
           disabled={!tableInstance.getCanNextPage()}
+          className="actionBtn"
         >
           {">>"}
         </button>
