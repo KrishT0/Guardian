@@ -22,7 +22,42 @@ table {
   tfoot td {
     padding-top: 12px;
     padding-bottom: 12px;
-    text-align: center;
-    background-color: #4caf50;
+    text-align: left;
+    background-color: #171821;
     color: white;
   }
+.actionBtn {
+    background: #171821;
+    font-size: medium;
+    color: rgb(223, 217, 217);
+    font-weight: bold;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+  }
+  .actions{
+    display: flex;
+    gap: 0.3rem;
+  }
+@media screen and (max-width: 760px) {
+  table{
+    margin: 0 1rem;
+    font-size: 0.7rem;
+  }
+}
+@media screen and (max-width: 608px) {
+
+  td{
+    display: block;
+  }
+  th{
+    display: none;
+  }
+  td::before{
+    font-size: larger;
+    font-weight: 700;
+    content: attr(data-cell) ":  ";
+    text-transform: capitalize;
+  }
+}
