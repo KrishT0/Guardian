@@ -1,7 +1,7 @@
 .container {
   max-width: 1300px;
   margin: 0 auto;
-  height: 85vh;
+  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -130,12 +130,13 @@
 
 .forgetForm {
   width: 25rem;
-  height: 10rem;
+  height: 12rem;
   padding: 2rem;
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
   background: #f3f6f9;
+  justify-content: space-between;
 }
 
 .forgetForm label {
@@ -143,7 +144,7 @@
 }
 
 .forgetForm input {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   padding: 0.5rem;
   border-radius: 1rem;
   border: 2px solid black;
@@ -155,7 +156,7 @@
 }
 
 .forgetForm button {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   padding: 0.5rem;
   border-radius: 0.5rem;
   border: none;
@@ -172,4 +173,79 @@
   margin-top: 0;
   margin-bottom: 0.5rem;
   padding: 0;
+}
+
+@media (max-width: 1300px) {
+  .container img {
+    width: 40rem;
+  }
+}
+
+@media (max-width: 1150px) {
+  .container img {
+    width: 30rem;
+  }
+  .loginform {
+    width: 20rem;
+    height: 25rem;
+  }
+  .signUpform {
+    width: 20rem;
+    height: 27rem;
+  }
+  .forgetForm {
+    width: 20rem;
+    height: 12rem;
+  }
+}
+
+@media (max-width: 960px) {
+  .container {
+    gap: 1rem;
+  }
+  .loginform {
+    width: 15rem;
+    height: 25rem;
+  }
+  .signUpform {
+    width: 15rem;
+    height: 27rem;
+  }
+  .forgetForm {
+    width: 15rem;
+    height: 12rem;
+  }
+}
+
+@media (max-width: 930px) {
+  .container img {
+    display: none;
+  }
+  .loginform {
+    width: 29rem;
+    height: 25rem;
+  }
+  .signUpform {
+    width: 29rem;
+    height: 27rem;
+  }
+  .forgetForm {
+    width: 29rem;
+    height: 12rem;
+  }
+}
+
+@media (max-width: 460px) {
+  .loginform {
+    width: 22rem;
+    height: 25rem;
+  }
+  .signUpform {
+    width: 20rem;
+    height: 27rem;
+  }
+  .forgetForm {
+    width: 20rem;
+    height: 12rem;
+  }
 }

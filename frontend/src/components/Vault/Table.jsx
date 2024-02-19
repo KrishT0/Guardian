@@ -1,21 +1,21 @@
 /* eslint-disable react/prop-types */
-import React from "react";
-import "./table.css";
+import React from 'react';
+import './table.css';
 import {
   useReactTable,
   flexRender,
   getCoreRowModel,
   getPaginationRowModel,
-} from "@tanstack/react-table";
+} from '@tanstack/react-table';
 // import dataJSON from "./data.json";
 
-const Table = ({columnDef,dataJSON}) => {
+const Table = ({ columnDef, dataJSON }) => {
   const finalData = React.useMemo(() => dataJSON, [dataJSON]);
   const finalColumnDef = React.useMemo(() => columnDef, [columnDef]);
 
   const tableInstance = useReactTable({
     columns: finalColumnDef,
-    data: finalData,  
+    data: finalData,
     getCoreRowModel: getCoreRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
   });
@@ -70,7 +70,7 @@ const Table = ({columnDef,dataJSON}) => {
           onClick={() => tableInstance.setPageIndex(0)}
           disabled={!tableInstance.getCanPreviousPage()}
         >
-          {"<<"}
+          {'<<'}
         </button>
         <button
           onClick={() => tableInstance.previousPage()}
@@ -90,7 +90,7 @@ const Table = ({columnDef,dataJSON}) => {
           }
           disabled={!tableInstance.getCanNextPage()}
         >
-          {">>"}
+          {'>>'}
         </button>
       </div>
       <hr />

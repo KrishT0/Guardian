@@ -16,7 +16,7 @@ function Authentication({ mode }) {
       <div>
         <img src={auth} alt="" />
       </div>
-      <div>
+      <div className={classes.rightContainer}>
         {authMode === 'login' ? (
           <Login setAuthMode={setAuthMode} />
         ) : (
