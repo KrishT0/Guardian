@@ -19,13 +19,4 @@
   cursor: pointer;
 }
 
-.modalBtn {
-  background: #171821;
-  font-size: larger;
-  color: #91a0b5;
-  font-weight: bold;
-  border: none;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
-}
+
