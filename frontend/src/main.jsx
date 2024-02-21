@@ -1,6 +1,10 @@
-import * as React from 'react';
+import React, { useEffect } from 'react';
 import * as ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import {
+  createBrowserRouter,
+  RouterProvider,
+  useLocation,
+} from 'react-router-dom';
 import { Provider } from 'react-redux';
 
 import Root from './Root';
@@ -18,11 +22,26 @@ import Vault from './pages/Vault';
 import PersonalPage from './pages/PersonalPage';
 import SubscribeToUpdate from './components/Others/Subscribe/SubscribeToUpdate';
 
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
+
 const router = createBrowserRouter([
   {
     path: '/',
     errorElement: <Error />,
-    element: <Root />,
+    element: (
+      <>
+        <ScrollToTop />
+        <Root />
+      </>
+    ),
     children: [
       {
         index: true,
@@ -35,26 +54,26 @@ const router = createBrowserRouter([
           { path: 'sign-up', element: <Authentication mode={'sign-up'} /> },
         ],
       },
-      {
-        path: 'personal',
-        element: <PersonalPage />,
-      },
+      // {
+      //   path: 'personal',
+      //   element: <PersonalPage />,
+      // },
       {
         path: 'forget-password',
         element: <ForgetPassword />,
       },
-      {
-        path: 'pricing',
-        element: <Pricing />,
-      },
+      // {
+      //   path: 'pricing',
+      //   element: <Pricing />,
+      // },
       {
         path: 'privacy',
         element: <Privacy />,
       },
-      {
-        path: 'works',
-        element: <Works />,
-      },
+      // {
+      //   path: 'works',
+      //   element: <Works />,
+      // },
       {
         path: 'vault',
         element: <ProtectedRoutes />,
@@ -65,10 +84,10 @@ const router = createBrowserRouter([
           },
         ],
       },
-      {
-        path: 'subscribe',
-        element: <SubscribeToUpdate />,
-      },
+      // {
+      //   path: 'subscribe',
+      //   element: <SubscribeToUpdate />,
+      // },
     ],
   },
 ]);

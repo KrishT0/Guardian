@@ -1,6 +1,7 @@
 .back {
   background: #171821;
   color: #91a0b5;
+  margin: 1 auto;
 }
 
 .back h1 {
@@ -18,6 +19,7 @@ h4 {
 .mainText {
   max-width: 950px;
   margin: 0 auto;
+  padding: 1rem;
 }
 
 .head {

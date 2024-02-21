@@ -23,8 +23,7 @@ function Privacy() {
           DPF Principles shall govern. We are subject to the investigatory
           powers of the FTC with respect to our DPF compliance. To learn more
           about the EU-U.S. Data Privacy Framework program, and to view our
-          certification, please visit
-          https://www.dataprivacyframework.gov/s/participant-search.
+          certification, please visit https://www.dataprivacy.com
         </p>
         <h2>EU-U.S. Data Privacy Framework (Principles)</h2>
         <ul>
@@ -237,13 +236,6 @@ function Privacy() {
           for a listing of sponsors.If you would like to change your sharing
           instructions with these sponsors, please visit the website of such
           sponsors.
-        </p>
-        <h2>Job Candidate Applications</h2>
-        <h3>Collection, Use, and Retention</h3>
-        <p>
-          If you apply for a job at Guardian, we collect and use your Personal
-          Information for legitimate human resources and business management
-          reasons including:
         </p>
       </div>
     </section>

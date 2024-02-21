@@ -17,9 +17,9 @@ function HeroSection() {
           <Link to="/auth/sign-up">
             <button className={classes.btn}>Get Started today</button>
           </Link>
-          <Link to="/pricing">
-            <button className={classes.btn}> View Pricing</button>
-          </Link>
+          {/* <Link to="/pricing"> */}
+          <button className={classes.btn}> View Pricing</button>
+          {/* </Link> */}
         </div>
       </div>
       <img src={image} alt="Application demo image" className={classes.right} />

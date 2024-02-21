@@ -2,10 +2,10 @@ import React from 'react';
 import classes from './extra.module.css';
 import ExtraCard from './ExtraCard';
 
-import clockLock from '../../../assets/circle-lock.png';
-import message from '../../../assets/message.png';
-import safeLock from '../../../assets/safe-lock.png';
-import keyLock from '../../../assets/key-lock.png';
+import clockLock from '../../../assets/circle-lock.svg';
+import message from '../../../assets/message-lock.svg';
+import safeLock from '../../../assets/safe-lock.svg';
+import keyLock from '../../../assets/key-lock.svg';
 
 function Extra() {
   const data = [

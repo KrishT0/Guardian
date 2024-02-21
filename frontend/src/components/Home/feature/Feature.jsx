@@ -2,9 +2,9 @@ import React from 'react';
 import FeatureCard from './FeatureCard';
 import classes from './feature.module.css';
 
-import lockImage from '../../../assets/lock-eye.png';
-import clockImage from '../../../assets/clock.png';
-import device from '../../../assets/device.png';
+import lockImage from '../../../assets/lock-eye.svg';
+import clockImage from '../../../assets/clock.svg';
+import device from '../../../assets/device.svg';
 
 function Feature() {
   const data = [
