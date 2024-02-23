@@ -19,8 +19,9 @@ const vaultSchema=new Schema({
                 type: String,
                 required : true,
             },
-            phone_number: {
-                type: String
+            websiteUrl: {
+                type: String,
+                required: true,
             },
             password: {
                 type: String,

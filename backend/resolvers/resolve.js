@@ -1,4 +1,3 @@
-import {guardian_encrypt} from 'guardian-vte';
 import CryptoJS from "crypto-js";
 import User from "../models/User.js";
 import Vault from "../models/Vault.js";
@@ -8,6 +7,11 @@ import {} from 'dotenv/config'
 import mongoose from "mongoose";
 import Tokens from "../models/Tokens.js";
 import { verifyEmail } from '../utils/email_verify.js';
+import SibApiV3Sdk from 'sib-api-v3-sdk';
+import Otp from "../models/Otp.js";
+const defaultClient = SibApiV3Sdk.ApiClient.instance; 
+const apiKey = defaultClient.authentications['api-key'];
+apiKey.apiKey = process.env.EMAIL_API_KEY;
 export const resolvers={
     Query:{
         vaultData: async(_,n,context)=>{
@@ -16,22 +20,12 @@ export const resolvers={
             }
             const vaultData=await Vault.find({userId: context.userId}); 
             const result=vaultData.map(v=>{
-                if(v.vault.phone_number){
-                    return {
-                        _id: v._id,
-                        name: v.vault.name,
-                        email: v.vault.email,
-                        phone_number: v.vault.phone_number,
-                        password: v.vault.password
-                    }
-                }
-                else{
-                    return {
-                        _id: v._id,
-                        name: v.vault.name,
-                        email: v.vault.email,
-                        password: v.vault.password
-                    }
+                return {
+                    _id: v._id,
+                    name: v.vault.name,
+                    email: v.vault.email,
+                    websiteUrl: v.vault.websiteUrl,
+                    password: v.vault.password
                 }
             })
             return result;
@@ -40,6 +34,7 @@ export const resolvers={
     Mutation:{
         register : async(_,{userNew})=>{
             if(!verifyEmail(userNew.email)){
+                // console.log(verifyEmail(userNew.email))
                 throw Error("Invalid details");
             }
             const user=await User.findOne({email : userNew.email })
@@ -118,20 +113,87 @@ export const resolvers={
                 throw Error("You must be logged in.")
             }
             const editedData=vaultDoc.vault;
-            if(editedData.password){
-                const container=[]
-             const key="10000000111001111110011011011101010001111100101100000101100011101010000111011001110110001100111010100010";
-             const encrypted_password=guardian_encrypt(editedData.password,key,container);
-             editedData.password=encrypted_password;
-            }
             let updateData = {};
             if (editedData.email) updateData['vault.email'] = editedData.email;
             if (editedData.password) updateData['vault.password'] = editedData.password;
             if (editedData.name) updateData['vault.name'] = editedData.name;
-            if (editedData.phone_number) updateData['vault.phone_number'] = editedData.phone_number;
+            if (editedData.websiteUrl) updateData['vault.websiteUrl'] = editedData.websiteUrl;
 
            const res= await Vault.findOneAndUpdate({_id: id},{$set: updateData},{new: true})
             return "Updated Successfully"
+        },
+        resetPassword: async (_,{userEmail})=>{
+            const apiInstance=new SibApiV3Sdk.TransactionalEmailsApi();
+            const sender={
+                email: "guardian@gmail.com",
+                name: "Your guardians",
+            };
+            const reciever=[
+                {
+                    email: userEmail,
+                }
+            ];
+            try{
+                const code=Math.floor(100000 + Math.random() * 900000);
+                const otp=new Otp({
+                    userEmail: userEmail,
+                    otp: code
+                })
+                await otp.save();
+                const sendEmail=await apiInstance.sendTransacEmail({
+                    sender,
+                    to: reciever,
+                    subject: "Reset Password",
+                    textContent: `Please reset your password with this otp:- ${code}. It is only valid for 5 mins.`
+                })
+                return {
+                    message: "Email send",
+                    data: {
+                        id: sendEmail
+                    },
+                }
+            }catch(error){
+                return {
+                    message: "Error in sending mail",
+                }
+            }
+        },
+        verifyOtp: async(_,{otpCredentials})=>{
+            if(!otpCredentials){
+                throw Error("Invalid Data");
+            }
+            const user = await Otp.findOne({userEmail : otpCredentials.email});
+            if(!user){
+                throw Error("Invalid Data");
+            }
+            if(user.otp !== otpCredentials.otp){
+                throw Error("Incorrect otp");
+            }
+            return {
+                message: "Otp verified successfully"
+            }
+        },
+        updatePassword: async(_,{userDetails}) => {
+            if(!userDetails){
+                throw Error("Invalid Data");
+            }
+            try{
+                console.log(userDetails.email);
+                const user = await User.findOne({email : userDetails.email });
+                if(!user){
+                    throw Error("Invalid Data");
+                }
+                const hashedPassword=CryptoJS.SHA256(userDetails.master_password).toString(CryptoJS.enc.Base64);
+                user.master_password=hashedPassword;
+                await user.save();
+            }catch(error){
+                return {
+                    message: error,
+                }
+            }
+            return {
+                message: "Password updates successfully"
+            }
         }
     }
 }

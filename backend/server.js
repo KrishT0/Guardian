@@ -8,10 +8,7 @@ import {mongo_url} from './utils/url.js';
 await mongoose.connect(mongo_url);
 import jwt from 'jsonwebtoken';
 import {resolvers} from './resolvers/resolve.js';
-import {parse, print, getIntrospectionQuery} from 'graphql';
 import Tokens from './models/Tokens.js';
-// format introspection query same way as apollo tooling do
-const introspectionQuery = print(parse(getIntrospectionQuery()));
 const server=new ApolloServer({
 
     typeDefs,

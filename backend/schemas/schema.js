@@ -20,6 +20,17 @@ type Mutation{
     logout(userEmail: String): String
     createVaultDoc(vaultDoc: VaultInput!): Response
     updateVaultDoc(vaultDoc: UpdateVaultInput): String
+    resetPassword(userEmail: String!): Response
+    verifyOtp(otpCredentials: OtpCred!): Response
+    updatePassword(userDetails: UserDetail!): Response
+}
+input OtpCred{
+    email: String!
+    otp: Int!
+}
+input UserDetail{
+    email: String!
+    master_password: String!
 }
 input UserSigninInput{
     email: String!
@@ -33,14 +44,14 @@ input UserInput{
 input VaultInput{
     name: String!
     email: String!
-    phone_number: String
+    websiteUrl: String!
     password: String!
 }
 type Vault{
     _id: String!
     name: String!
     email: String!
-    phone_number: String
+    websiteUrl: String!
     password: String!
 }
 input UpdateVaultInput{
@@ -50,7 +61,7 @@ input UpdateVaultInput{
 input updatedInput{
     name: String
     email: String
-    phone_number: String
+    websiteUrl: String
     password: String
 }
 type Response{
