@@ -7,6 +7,8 @@ import {
   getCoreRowModel,
   getPaginationRowModel,
 } from '@tanstack/react-table';
+import { MdOutlineKeyboardDoubleArrowLeft } from 'react-icons/md';
+import { MdOutlineKeyboardDoubleArrowRight } from 'react-icons/md';
 // import dataJSON from "./data.json";
 
 const Table = ({ columnDef, dataJSON }) => {
@@ -51,7 +53,10 @@ const Table = ({ columnDef, dataJSON }) => {
               <tr key={rowEl.id}>
                 {rowEl.getVisibleCells().map((cellEl) => {
                   return (
-                    <td key={cellEl.id} data-cell={cellEl.column.columnDef.header}>
+                    <td
+                      key={cellEl.id}
+                      data-cell={cellEl.column.columnDef.header}
+                    >
                       {flexRender(
                         cellEl.column.columnDef.cell,
                         cellEl.getContext()
@@ -71,7 +76,7 @@ const Table = ({ columnDef, dataJSON }) => {
           disabled={!tableInstance.getCanPreviousPage()}
           className="actionBtn"
         >
-          {'<<'}
+          <MdOutlineKeyboardDoubleArrowLeft />
         </button>
         <button
           onClick={() => tableInstance.previousPage()}
@@ -80,6 +85,10 @@ const Table = ({ columnDef, dataJSON }) => {
         >
           Previous Page
         </button>
+        <p>
+          {tableInstance.getState().pagination.pageIndex + 1} of{' '}
+          {tableInstance.getPageCount()}{' '}
+        </p>
         <button
           onClick={() => tableInstance.nextPage()}
           disabled={!tableInstance.getCanNextPage()}
@@ -94,7 +103,7 @@ const Table = ({ columnDef, dataJSON }) => {
           disabled={!tableInstance.getCanNextPage()}
           className="actionBtn"
         >
-          {'>>'}
+          <MdOutlineKeyboardDoubleArrowRight />
         </button>
       </div>
       <hr />

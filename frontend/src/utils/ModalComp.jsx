@@ -1,16 +1,9 @@
-/* eslint-disable react/prop-types */
 import ModalForm from './ModalForm';
 
-const ModalComp = ({data, isOpen,onClose}) => {
-
+const ModalComp = ({ data, isOpen, onClose }) => {
   return (
     <div>
-
-      <ModalForm
-        isOpen={isOpen}
-        closeModal={onClose}
-        data={data}
-      />
+      <ModalForm isOpen={isOpen} closeModal={onClose} data={data} />
     </div>
   );
 };

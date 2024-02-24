@@ -1,7 +1,7 @@
 .container {
   max-width: 1200px;
   margin: 1rem auto;
-  
+
   min-height: 90vh;
   display: flex;
   flex-direction: column;
@@ -135,4 +135,22 @@
 
 .form span {
   color: #fca5a5;
+}
+
+.inputPass {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.boton {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+.passContainer {
+  display: flex;
+  align-items: center;
 }
