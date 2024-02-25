@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&family=Play:wght@400;700&display=swap');
+
 .container {
   max-width: 1300px;
   margin: 0 auto;
@@ -175,6 +177,17 @@
   padding: 0;
 }
 
+.upperText {
+  display: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.upperText span {
+  color: blueviolet;
+  font-family: 'Play', sans-serif;
+}
+
 @media (max-width: 1300px) {
   .container img {
     width: 40rem;
@@ -218,6 +231,13 @@
 }
 
 @media (max-width: 930px) {
+  .upperText {
+    display: block;
+    text-align: center;
+  }
+  .container {
+    flex-direction: column;
+  }
   .container img {
     display: none;
   }

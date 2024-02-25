@@ -15,6 +15,9 @@ function Authentication({ mode }) {
     <section className={classes.container}>
       <div>
         <img src={auth} alt="" />
+        <p className={classes.upperText}>
+          Welcome to <span>Guardian</span>{' '}
+        </p>
       </div>
       <div className={classes.rightContainer}>
         {authMode === 'login' ? (
