@@ -168,6 +168,20 @@
   cursor: pointer;
 }
 
+/* forget modal */
+.forgetModal {
+  margin-top: 10rem !important;
+}
+
+.forgetContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: baseline;
+  height: 100%;
+}
+
+/* extra */
 .error {
   color: red;
   text-align: center;
@@ -227,6 +241,10 @@
   .forgetForm {
     width: 15rem;
     height: 12rem;
+  }
+  .forgetModal {
+    width: 80% !important;
+    margin-top: 30% !important;
   }
 }
 
